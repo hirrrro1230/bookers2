@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'homes/about' => 'homes#about', as: 'about'
   resources :books
   post 'books/:id/edit' => 'books#edit'
-  resources :users, only: [:show, :edit, :index]
+  resources :users, only: [:show, :edit, :index, :update]
 end
