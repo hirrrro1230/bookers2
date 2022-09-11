@@ -16,7 +16,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navba-brand" href="/">
+          <a class="navbar-brand" href="/">
       <span class='navbar-brand'>Bookers</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,9 @@
        <% end %>
       </li>
       <li>
-        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+        <%= link_to destroy_user_session_path, method: :delete, class:'navbar-brand' do %>
+          <i class="fa-solid fa-right-from-bracket"></i>Log out
+        <% end %>
       </li>
     <% else %>
       <li>
@@ -55,12 +57,14 @@
        <% end %>
       </li>
       <li>
-        <i class="fa-solid fa-user-plus"></i>
-        <%= link_to "Sign up", new_user_registration_path %>
+        <%= link_to new_user_registration_path, class:'navbar-brand' do %>
+          <i class="fa-solid fa-user-plus"></i>Sign up
+        <% end %>
       </li>
       <li>
-        <i class="fa-solid fa-right-to-bracket"></i>
-        <%= link_to "Log in", new_user_session_path %>
+        <%= link_to new_user_session_path, class:'navbar-brand' do %>
+          <i class="fa-solid fa-right-to-bracket"></i>Log in
+        <% end %>
       </li>
     <% end %>
     </ul>
