@@ -52,7 +52,7 @@
        <% end %>
       </li>
       <li>
-      <%= link_to root_path, class:'navbar-brand' do %>
+      <%= link_to home_about_path, class:'navbar-brand' do %>
         <i class="fa-solid fa-link"></i>About
        <% end %>
       </li>
@@ -71,6 +71,7 @@
     </div>
     </nav>
   </header>
+    <%= render 'devise/shared/flash_message' %>
     <%= yield %>
     <footer>
       <div class="container mt-5">
